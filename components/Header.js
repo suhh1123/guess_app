@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
+import colors from '../constants/colors';
 
 const height = Dimensions.get('screen').height;
 
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: height / 10,
     paddingTop: 30,
-    backgroundColor: '#f7287b',
+    backgroundColor: colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
   },
