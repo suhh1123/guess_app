@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { Button, StyleSheet, Text, View, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { Button, StyleSheet, Text, View, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native';
 import Card from '../components/Card';
 import Input from '../components/Input';
+import NumberContainer from '../components/NumberContainer';
+import MainButton from '../components/MainButton';
 import colors from '../constants/colors';
+import defaultStyle from '../constants/default-style';
 
 const GameStartScreen = props => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -19,6 +22,15 @@ const GameStartScreen = props => {
   }
 
   const confirmInputHandler = () => {
+    const chosenNumber = parseInt(enteredValue);
+    if (chosenNumber === NaN || chosenNumber <= 0 || chosenNumber > 99) {
+      Alert.alert(
+        'Invalid Numbers',
+        'Number has to be between 1 and 99',
+        [{ text: 'Okay', style: 'destructive', onPress: resetInputHandler }]
+      )
+      return;
+    }
     setConfirmed(true);
     setEnteredValue('');
     setSelectedNumber(parseInt(enteredValue));
@@ -28,7 +40,13 @@ const GameStartScreen = props => {
   let confirmedOutput;
 
   if (confirmed) {
-    confirmedOutput = <Text>Chose Number: {selectedNumber}</Text>
+    confirmedOutput = (
+      <Card style={styles.summaryContainer}>
+        <Text>You selected</Text>
+        <NumberContainer>{selectedNumber}</NumberContainer>
+        <MainButton onPress={() => props.onStartGame(selectedNumber)}>Start Game</MainButton>
+      </Card>
+    )
   }
 
   return (
@@ -36,7 +54,7 @@ const GameStartScreen = props => {
       Keyboard.dismiss();
     }}>
       <View style={styles.screen}>
-        <Text style={styles.title}>Start a New Game!</Text>
+        <Text style={{ ...styles.title, ...defaultStyle.bodyText }}>Start a New Game!</Text>
         <Card style={styles.inputContainer}>
           <Text>Select a Number</Text>
           <Input 
@@ -88,6 +106,12 @@ const styles = StyleSheet.create({
   input: {
     width: 150,
     textAlign: 'center'
+  },
+  summaryContainer: {
+    width: 300,
+    maxWidth: '80%',
+    alignItems: 'center',
+    marginTop: 20,
   }
 });
 

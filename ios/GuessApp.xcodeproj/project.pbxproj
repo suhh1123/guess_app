@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* GuessAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GuessAppTests.m */; };
+		026CC7E71F574942AB5C6CBA /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0997AD8D1A435C97389A5A /* OpenSans-Regular.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		39A6F10ADB4B2E0861180EAE /* libPods-GuessApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8460731FD98B793DEE6EF11 /* libPods-GuessApp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		AAA90F9F95D01C243B788B60 /* libPods-GuessApp-GuessAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3FF25F748479F7D783EE0B /* libPods-GuessApp-GuessAppTests.a */; };
+		F57F7E118215457F86300DA2 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7F61E64EF49879AB23F41 /* OpenSans-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GuessApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GuessApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GuessApp/main.m; sourceTree = "<group>"; };
+		1EF7F61E64EF49879AB23F41 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Bold.ttf"; path = "../assets/fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		1F0997AD8D1A435C97389A5A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Regular.ttf"; path = "../assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		2A3FF25F748479F7D783EE0B /* libPods-GuessApp-GuessAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GuessApp-GuessAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEE63E698AE59838307A342 /* Pods-GuessApp-GuessAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuessApp-GuessAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GuessApp-GuessAppTests/Pods-GuessApp-GuessAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GuessApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,6 +110,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4D92D37E236B4DD0B1473C9B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1EF7F61E64EF49879AB23F41 /* OpenSans-Bold.ttf */,
+				1F0997AD8D1A435C97389A5A /* OpenSans-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +136,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D923AB14A2C386D68D512564 /* Pods */,
+				4D92D37E236B4DD0B1473C9B /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -245,6 +260,8 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				F57F7E118215457F86300DA2 /* OpenSans-Bold.ttf in Resources */,
+				026CC7E71F574942AB5C6CBA /* OpenSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
