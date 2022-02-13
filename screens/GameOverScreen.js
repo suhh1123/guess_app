@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView, Dimensions } from 'react-native';
 import MainButton from '../components/MainButton';
 import Colors from '../constants/colors';
 import defaultStyle from '../constants/default-style';
@@ -29,13 +29,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   imageContainer: {
-    width: 300,
-    height: 300,
-    borderRadius: 200,
+    width: Dimensions.get('window').width * 0.7,
+    height: Dimensions.get('window').width * 0.7,
+    borderRadius: Dimensions.get('window').width * 0.7 / 2,
     borderWidth: 1,
     borderColor: 'black',
     overflow: 'hidden',
-    marginVertical: 30,
+    marginVertical: Dimensions.get('window').height / 30,
   },
   image: {
     width: '100%',
